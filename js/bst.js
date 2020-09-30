@@ -1,3 +1,5 @@
+const Queue = require('./Queue');
+
 class BinarySearchTree {
   constructor(key = null, value = null, parent = null) {
     this.key = key;
@@ -39,3 +41,5 @@ class BinarySearchTree {
     return values;
   }
 }
+
+module.export = BinarySearchTree;

@@ -1,17 +1,10 @@
 /* eslint-disable eqeqeq */
-// * Linear Search
+// * 1. How many searches?
 
-// Searches for a particular value within an array
-function indexOf(array, value) {
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] == value) {
-      return i;
-    }
-  }
-  return -1;
-} // O(n)
+const sortedList = [3, 5, 6, 8, 11, 12, 14, 15, 17, 18];
 
-// * Divide and Conquer
+function howManySearches() {}
+
 function binarySearch(array, value, start, end) {
   start === undefined ? 0 : start;
   end = end === undefined ? array.length : end;
@@ -32,3 +25,11 @@ function binarySearch(array, value, start, end) {
     return binarySearch(array, value, start, index - 1);
   }
 }
+
+console.log(binarySearch(sortedList, 8, 0, sortedList.length));
+/*
+  0 10
+  0 4
+  3 4
+  3
+*/
